@@ -43,8 +43,8 @@ var questions = [
         },
     
     { q: 'Upon encountering empty statements, what does the Javascript Interpreter do?', 
-          a: '4 Ignores the Statements', 
-          choices: [{choice: '1. Throws and error'}, {choice: '2. Crashes and Resets the Program'}, {choice: '3. Gives a Warning'}, {choice: '4. Ignores the Statements'}]
+          a: '4. Ignores the Statements', 
+          choices: [{choice: '1. Throws an error'}, {choice: '2. Crashes and Resets the Program'}, {choice: '3. Gives a Warning'}, {choice: '4. Ignores the Statements'}]
         },
         
     { q: 'How can a datatype be declared to be a constant type?', 
