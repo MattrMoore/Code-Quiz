@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript Quiz</title>
+        <link rel="stylesheet" href="Assets\style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1 id="see-highscores">View High Scores!</h1>
+            <h1 class="timer">Time Remaining: <span id="timer"></span></h1>
+        </header>
+    
+    <div id="start-container" class="reveal">
+        <div class="startcontainer">
+            <h2>Javascript Quiz</h2>
+           
+            <p> 
+            Do your best to answer the following questions before the alloted time expires! 
+            Each question is worth 5 points! Wrong answers will subtract 3 points and 2 seconds 
+            from your time so be sure to take your time! Good Luck!
+           </p>
+
+           <button class="btn start-end" id="start-quiz">Start Quiz!</button>
+        </div>
+    </div>
+
+    <div id="questions-container" class="hide">
+        <div class="questioncontainer">
+            <div id="question"></div>
+            <div id="answer-buttons" class="btn-column"></div>
+        </div>
+    </div>
+
+    <div id="end-container" class="hide">
+        <div class="endcontainer">
+         <div id=score-banner>
+             <h1>Finished! Congratulations!</h1>
+        </div> 
+        <form id="initials-form" class="initials">
+            <p> Enter Initials:
+              <input type="text" name="initials" id="initials" class="text-input" />
+              <button class="btn start-end" id="sumbit-score" type="submit">Submit</button> </p>
+            </form>
+         </div>
+    </div>
+
+    <div id="high-score-container" class="hide">
+        <div class="high-scores container">
+          <h3 class="high-scores">High Scores</h3>
+          <ol id="high-scores-list" class="scores-list"></ol>
+      <div>
+          <button class="btn" id="go-back">Go back</button>
+          <button class="btn" id="clear-high-scores">Clear high scores</button>
+      </div>
+      </div>
+  </div>
+
+  <div class="hide" id="correct">
+      <h4>Correct</h4>
+  </div>
+  <div class="hide" id="incorrect">
+      <h5>Incorrect</h5>
+  </div>
+
+  <script src="Assets/script.js"></script> 
+</body>
+</html>
+
