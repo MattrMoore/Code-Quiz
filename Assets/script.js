@@ -27,7 +27,7 @@ timerEl.innerText = 0;
 var HighScores = [];
 
 //assign array details for questions 
-var arrayShuffledQuestions
+var arrayShuffleQuestions
  var QuestionIndex = 0
 
  // The array of questions for our quiz game.
@@ -92,7 +92,7 @@ var renderStartPage = function () {
 
     //every second, check if game-over is true, or if there is time left. Start time at 30. 
     var setTime = function () {
-        timeleft = 30;
+        timeleft = 45;
 
     var timercheck = setInterval(function() {
         timerEl.innerText = timeleft;
@@ -118,7 +118,7 @@ var renderStartPage = function () {
         containerQuestionEl.classList.remove('hide');
         containerQuestionEl.classList.add('show');
         //Shuffle the questions so they show in random order
-        arrayShuffledQuestions = questions.sort(() => Math.random() - 0.5)
+        arrayShuffleQuestions = questions.sort(() => Math.random() - 0.5)
         setTime()
         setQuestion()
       }
@@ -126,7 +126,7 @@ var renderStartPage = function () {
     //set next question for quiz
     var setQuestion = function() {
         resetAnswers()
-        displayQuestion(arrayShuffledQuestions[QuestionIndex])
+        displayQuestion(arrayShuffleQuestions[QuestionIndex])
     }
 
     //remove answer buttons
@@ -170,7 +170,7 @@ var renderStartPage = function () {
     //check if answer is correct    
     var answerCheck = function(event) {
         var selectedanswer = event.target
-            if (arrayShuffledQuestions[QuestionIndex].a === selectedanswer.innerText){
+            if (arrayShuffleQuestions[QuestionIndex].a === selectedanswer.innerText){
                 answerCorrect()
                 score = score + 5
             }
@@ -183,7 +183,7 @@ var renderStartPage = function () {
 
         //go to next question, check if there is more questions
           QuestionIndex++
-            if  (arrayShuffledQuestions.length > QuestionIndex + 1) {
+            if  (arrayShuffleQuestions.length > QuestionIndex + 1) {
                 setQuestion()
             }   
             else {
@@ -245,7 +245,7 @@ var renderStartPage = function () {
             
     }
 
-    //load values/ called on page load
+    //load values 
     var loadHighScore = function () {
         var LoadedHighScores = localStorage.getItem("HighScores")
             if (!LoadedHighScores) {
@@ -267,7 +267,7 @@ var renderStartPage = function () {
         }
     }  
 
-    //display high score screen from link or when intials entered
+    //displays high score screen from link or when intials entered
     var displayHighScores = function() {
 
         containerHighScoresEl.classList.remove("hide");
