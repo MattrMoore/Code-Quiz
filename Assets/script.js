@@ -90,7 +90,7 @@ var renderStartPage = function () {
         }
     }
 
-    //every second, check if game-over is true, or if there is time left. Start time at 30. 
+    //every second, check if game-over is true, or if there is time left. Start time at 45 
     var setTime = function () {
         timeleft = 45;
 
@@ -148,7 +148,7 @@ var renderStartPage = function () {
             answerbuttonsEl.appendChild(answerbutton)
             }
         };
-    //display correct! on screen
+    //display Correct! on screen
     var answerCorrect = function() {
         if (correctEl.className = "hide") {
             correctEl.classList.remove("hide")
